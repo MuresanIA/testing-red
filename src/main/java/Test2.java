@@ -97,8 +97,11 @@ public class Test2 {
 
         WebElement numberElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierHouseNumber\"]/div[2]/input"));
         numberElement.sendKeys("Test Number Element");
-        System.out.println("Test: Testing Number Element Successful!");
+        System.out.println("Test: Sending Keys to Number Element Successful!");
 
+        WebElement postalCodeElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierPostalCode\"]/div[2]/input"));
+        postalCodeElement.sendKeys("Test Postal Code");
+        System.out.println("Test: Sending Keys to Postal Code Element Successful!");
 //        wait = new WebDriverWait(driver, 20);
         driver.close();
 
