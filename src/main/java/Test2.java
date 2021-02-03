@@ -55,19 +55,19 @@ public class Test2 {
         System.out.println("Test: Expected Conditions: Client Area Content Successful!");
         WebElement empoweredFullNameTextField = driver.findElement(By.xpath("//*[@id=\"testing_SupplierEmpoweredFullName\"]/div[2]/input"));
         empoweredFullNameTextField.sendKeys("Test Empowered Full Name");
-        System.out.println("Test: Empowered Full Name Successful!");
+        System.out.println("Test: Sendng Keys to Empowered Full Name Successful!");
 
         WebElement companyName = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCompanyName\"]/div[2]/input"));
         companyName.sendKeys("Test Company Name");
-        System.out.println("Test: Company Name Successful!");
+        System.out.println("Test: Sending Keys to Company Name Successful!");
 
         WebElement identificationNUmber = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCompanyIdentificationNumber\"]/div[2]/input"));
         identificationNUmber.sendKeys("Test Identification Number");
-        System.out.println("Test: Identification Number Successful!");
+        System.out.println("Test: Sending Keys to Identification Number Successful!");
 
         WebElement vatCode = driver.findElement(By.xpath("//*[@id=\"testing_SupplierVatCode\"]/div[2]/input"));
         vatCode.sendKeys("Test VAT Code");
-        System.out.println("Test: VAT Code Successful!");
+        System.out.println("Test: Sending Keys to VAT Code Successful!");
 
         WebElement selectCountry = driver.findElement(By.xpath("//*[@id=\"testing_autocompleteForm\"]"));
         selectCountry.click();
@@ -85,8 +85,17 @@ public class Test2 {
         selectRomaniaAsCountry.click();
         System.out.println("Test: Select Romania As Country Successful!");
 
+        wait = new WebDriverWait(driver, 50);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"client-area-content\"]/red-platform-create-supplier/ion-content/red-platform-create-supplier-component/form")));
+        WebElement cityElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCity\"]/div[2]/input"));
+        cityElement.sendKeys("Test City Element");
+        System.out.println("Test: Sending keys to City Element Successful!");
 
-        wait = new WebDriverWait(driver, 20);
+        WebElement streetAddressElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierStreet\"]/div[2]/input"));
+        streetAddressElement.sendKeys("Test Street Address");
+        System.out.println("Test: Send Keys to Street Address Successful!");
+
+//        wait = new WebDriverWait(driver, 20);
         driver.close();
 
     }
