@@ -105,16 +105,10 @@ public class Test2 {
         postalCodeElement.sendKeys("Test Postal Code");
         System.out.println("Test: Sending Keys to Postal Code Element Successful!");
 
-//        WebElement scrollBar = driver.findElement(By.id("client-area-content"));
-//        javascriptExecutor.executeScript("window.scrollBy(0,1000)");
-//        System.out.println("Test: Scrolling Vertically 0 - 1000 Pixels Successful!");
-
-
-
-
-//        WebElement phoneNumberElement = driver.findElement(By.xpath("//*[@id=\"phone\"]"));
-//        phoneNumberElement.sendKeys("+40 21 123 4567");
-//        System.out.println("Test: Sending Keys to Phone Number Element Successful!");
+        WebElement phoneNumberElement = driver.findElement(By.id("phone"));
+        javascriptExecutor.executeScript("window.scrollBy(0,1000)", phoneNumberElement);
+        phoneNumberElement.sendKeys("40 21 123 4567");
+        System.out.println("Test: Sending Keys to Phone Number Element Successful!");
 
 //        wait = new WebDriverWait(driver, 20);
         driver.close();
