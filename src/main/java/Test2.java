@@ -32,14 +32,14 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 100);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("canvas")));
-        System.out.println("Test: Wait for canvas successful!");
+        System.out.println("Test: Identifying Webl Element Canvas successful!");
         List<WebElement> burger = driver.findElements(By.xpath("//*[@id=\"client-area-content\"]/red-platform-client-area-home/ion-header/ion-toolbar/ion-buttons/ion-menu-button//button"));
 
         if (burger.size() > 0) {
             burger.get(0).click();
         }
 
-        System.out.println("Test: Burger menu successful!");
+        System.out.println("Test: Identifying Burger menu successful!");
         WebElement supplierButton = driver.findElement(By.id("testing_SupplierButton"));
         supplierButton.click();
         System.out.println("Test: Click On Supplier Button Successful!");
@@ -85,7 +85,7 @@ public class Test2 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_search_results\"]/ion-item[1]/ion-label/ion-text/h3")));
         WebElement selectRomaniaAsCountry = driver.findElement(By.xpath("//*[@id=\"testing_search_results\"]/ion-item[1]/ion-label/ion-text/h3"));
         selectRomaniaAsCountry.click();
-        System.out.println("Test: Select Romania As Country Successful!");
+        System.out.println("Test: Selecting Romania As Country Successful!");
 
         wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"client-area-content\"]/red-platform-create-supplier/ion-content/red-platform-create-supplier-component/form")));
@@ -95,7 +95,7 @@ public class Test2 {
 
         WebElement streetAddressElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierStreet\"]/div[2]/input"));
         streetAddressElement.sendKeys("Test Street Address");
-        System.out.println("Test: Send Keys to Street Address Successful!");
+        System.out.println("Test: Sending Keys to Street Address Successful!");
 
         WebElement numberElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierHouseNumber\"]/div[2]/input"));
         numberElement.sendKeys("Test Number Element");
