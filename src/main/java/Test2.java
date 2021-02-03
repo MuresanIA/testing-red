@@ -90,6 +90,7 @@ public class Test2 {
         wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"client-area-content\"]/red-platform-create-supplier/ion-content/red-platform-create-supplier-component/form")));
         WebElement cityElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCity\"]/div[2]/input"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", cityElement);
         cityElement.sendKeys("Test City Element");
         System.out.println("Test: Sending keys to City Element Successful!");
 
