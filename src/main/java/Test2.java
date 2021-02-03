@@ -102,6 +102,17 @@ public class Test2 {
         WebElement postalCodeElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierPostalCode\"]/div[2]/input"));
         postalCodeElement.sendKeys("Test Postal Code");
         System.out.println("Test: Sending Keys to Postal Code Element Successful!");
+
+        WebElement selectPhoneNumberCountry = driver.findElement(By.xpath("//*[@id=\"testing_SupplierPhoneNumber\"]/ngx-intl-tel-input/div/div/div[1]/div[2]"));
+        selectPhoneNumberCountry.click();
+        System.out.println("Test: Click Country Drop Down for Phone Number Successful!");
+        wait = new WebDriverWait(driver, 50);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"country-search-box\"]")));
+
+//        WebElement phoneNumberElement = driver.findElement(By.xpath("//*[@id=\"phone\"]"));
+//        phoneNumberElement.sendKeys("+40 21 123 4567");
+//        System.out.println("Test: Sending Keys to Phone Number Element Successful!");
+
 //        wait = new WebDriverWait(driver, 20);
         driver.close();
 
