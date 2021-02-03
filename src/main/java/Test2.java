@@ -133,6 +133,22 @@ public class Test2 {
         IBANElement.sendKeys("Test IBAN Element");
         System.out.println("Test: Sending Keys to IBAN Element Successful!");
 
+        //TODO: Check if the following statements are correct or not
+        WebElement licenseTypeElement = driver.findElement(By.xpath("//*[@id=\"testing_supplierLicenseType\"]"));
+        licenseTypeElement.click();
+        System.out.println("Test: Click On License Plate Element Successful!");
+
+//        wait = new WebDriverWait(driver, 30);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("alert-12-hdr")));
+        WebElement checkBoxElectricity = driver.findElement(By.id("alert-input-12-0"));
+        checkBoxElectricity.click();
+        System.out.println("Test: Click On Check Box Electricity Element Successful!");
+
+        WebElement checkBoxSelectButton = driver.findElement(By.xpath("//*[@id=\"ion-overlay-12\"]/div[2]/div[4]/button[2]/span"));
+        checkBoxSelectButton.click();
+        System.out.println("Test: Click On Select Button from CheckBox Element Successful!");
+
+
 //        wait = new WebDriverWait(driver, 20);
         driver.close();
 
