@@ -119,6 +119,12 @@ public class Test2 {
         emailElement.sendKeys("test@gmail.com");
         System.out.println("Test: Sending Keys to Email Element Successful!");
 
+        WebElement bankNameElement = driver.findElement(By.xpath("//*[@id=\"testing_BankName\"]"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", bankNameElement);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_BankName\"]")));
+        bankNameElement.sendKeys("Test Bank Name");
+        System.out.println("Test: Sending Keys to Bank Name Element Successful!");
+
 //        wait = new WebDriverWait(driver, 20);
         driver.close();
 
