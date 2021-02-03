@@ -26,32 +26,43 @@ public class Test2 {
         username.sendKeys("muresan.alexandru933@gmail.com");
         password.sendKeys("Test123!");
         loginButton.click();
-        System.out.println("Login successful!");
+        System.out.println("Test: Login successful!");
 
         wait = new WebDriverWait(driver, 100);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("canvas")));
-
+        System.out.println("Test: Wait for canvas successful!");
         List<WebElement> burger = driver.findElements(By.xpath("//*[@id=\"client-area-content\"]/red-platform-client-area-home/ion-header/ion-toolbar/ion-buttons/ion-menu-button//button"));
 
         if (burger.size() > 0) {
             burger.get(0).click();
         }
 
+        System.out.println("Test: Burger menu successful!");
         WebElement supplierButton = driver.findElement(By.id("testing_SupplierButton"));
         supplierButton.click();
-
+        System.out.println("Test: Supplier Button Successful!");
         wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("testing_RoleInfoImg")));
-
+        System.out.println("Test: Expected Conditions: Element RoleInfoImg Located Successful!");
         WebElement becomeASupplierButton = driver.findElement(By.xpath("//*[@id=\"client-area-content\"]/red-platform-supplier/ion-content/ion-grid/ion-row/ion-col/red-platform-role-info/div/div/div[3]/ion-button"));
 //                                                                       //*[@id="client-area-content"]/red-platform-supplier/ion-content/ion-grid/ion-row/ion-col/red-platform-role-info/div/div/div[3]/ion-button//button
 
         becomeASupplierButton.click();
+        System.out.println("Test: Click on Become A Supplier Button Successful!");
 
         wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"client-area-content\"]/red-platform-create-supplier/ion-content/red-platform-create-supplier-component/form")));
-
+        System.out.println("Test: Expected Conditions: Client Area Content Successful!");
         WebElement empoweredFullNameTextField = driver.findElement(By.xpath("//*[@id=\"testing_SupplierEmpoweredFullName\"]/div[2]/input"));
-        empoweredFullNameTextField.sendKeys("Does it work?");
+        empoweredFullNameTextField.sendKeys("Test Empowered Full Name");
+        System.out.println("Test: Empowered Full Name Successful!");
+
+        WebElement companyName = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCompanyName\"]/div[2]/input"));
+        companyName.sendKeys("Test Company Name");
+        System.out.println("Test: Company Name Successful!");
+
+
+        driver.close();
+
     }
 }
