@@ -61,6 +61,11 @@ public class Test2 {
         companyName.sendKeys("Test Company Name");
         System.out.println("Test: Company Name Successful!");
 
+        WebElement identificationNUmber = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCompanyIdentificationNumber\"]/div[2]/input"));
+        identificationNUmber.sendKeys("Test Identification Number");
+        System.out.println("Test: Identification Number Successful!");
+
+
 
         driver.close();
 
