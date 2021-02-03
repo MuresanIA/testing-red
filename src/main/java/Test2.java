@@ -125,6 +125,11 @@ public class Test2 {
         bankNameElement.sendKeys("Test Bank Name");
         System.out.println("Test: Sending Keys to Bank Name Element Successful!");
 
+        WebElement bankAddressElement = driver.findElement(By.xpath("//*[@id=\"testing_BankAddress\"]"));
+        bankAddressElement.sendKeys("Test Bank Address");
+        System.out.println("Test: Sending Keys to Bank Address Element Successful!");
+
+
 //        wait = new WebDriverWait(driver, 20);
         driver.close();
 
