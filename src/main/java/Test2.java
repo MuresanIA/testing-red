@@ -105,13 +105,22 @@ public class Test2 {
         postalCodeElement.sendKeys("Test Postal Code");
         System.out.println("Test: Sending Keys to Postal Code Element Successful!");
 
-        WebElement phoneNumberElement = driver.findElement(By.id("phone"));
-        javascriptExecutor.executeScript("window.scrollBy(0,1000)", phoneNumberElement);
-        phoneNumberElement.sendKeys("40 21 123 4567");
+        WebElement phoneNumberElement = driver.findElement(By.xpath("//*[@id=\"phone\"]"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", phoneNumberElement);
+        wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"phone\"]")));
+        phoneNumberElement.sendKeys("40211234567");
         System.out.println("Test: Sending Keys to Phone Number Element Successful!");
 
+        WebElement emailElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierEmail\"]/div[2]/input"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", emailElement);
+        wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_SupplierEmail\"]/div[2]/input")));
+        emailElement.sendKeys("test@gmail.com");
+        System.out.println("Test: Sending Keys to Email Element Successful!");
+
 //        wait = new WebDriverWait(driver, 20);
-        driver.close();
+//        driver.close();
 
     }
 }
