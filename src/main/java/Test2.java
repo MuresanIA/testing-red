@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +13,7 @@ public class Test2 {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         driver.get("https://login-dev.redplatform.com/auth/realms/red_platform_dev/protocol/openid-connect/auth?client_id=nxredcrowdfunding&redirect_uri=https%3A%2F%2Fvlec-dev.redplatform.com%2F&state=34c587eb-f439-4b86-8658-34048dfab86d&response_mode=fragment&response_type=code&scope=openid&nonce=2385d9cb-c01f-4bcb-bed3-b2123df6a11c");
         driver.manage().window().maximize();
 
@@ -40,7 +42,7 @@ public class Test2 {
         System.out.println("Test: Burger menu successful!");
         WebElement supplierButton = driver.findElement(By.id("testing_SupplierButton"));
         supplierButton.click();
-        System.out.println("Test: Supplier Button Successful!");
+        System.out.println("Test: Click On Supplier Button Successful!");
         wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("testing_RoleInfoImg")));
         System.out.println("Test: Expected Conditions: Element RoleInfoImg Located Successful!");
@@ -55,7 +57,7 @@ public class Test2 {
         System.out.println("Test: Expected Conditions: Client Area Content Successful!");
         WebElement empoweredFullNameTextField = driver.findElement(By.xpath("//*[@id=\"testing_SupplierEmpoweredFullName\"]/div[2]/input"));
         empoweredFullNameTextField.sendKeys("Test Empowered Full Name");
-        System.out.println("Test: Sendng Keys to Empowered Full Name Successful!");
+        System.out.println("Test: Sending Keys to Empowered Full Name Successful!");
 
         WebElement companyName = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCompanyName\"]/div[2]/input"));
         companyName.sendKeys("Test Company Name");
@@ -71,7 +73,7 @@ public class Test2 {
 
         WebElement selectCountry = driver.findElement(By.xpath("//*[@id=\"testing_autocompleteForm\"]"));
         selectCountry.click();
-        System.out.println("Test: Click Country Search Bar Element Successful!");
+        System.out.println("Test: Click On Country Search Bar Element Successful!");
 
         wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_search\"]/div/input")));
@@ -103,11 +105,12 @@ public class Test2 {
         postalCodeElement.sendKeys("Test Postal Code");
         System.out.println("Test: Sending Keys to Postal Code Element Successful!");
 
-        WebElement selectPhoneNumberCountry = driver.findElement(By.xpath("//*[@id=\"testing_SupplierPhoneNumber\"]/ngx-intl-tel-input/div/div/div[1]/div[2]"));
-        selectPhoneNumberCountry.click();
-        System.out.println("Test: Click Country Drop Down for Phone Number Successful!");
-        wait = new WebDriverWait(driver, 50);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"country-search-box\"]")));
+//        WebElement scrollBar = driver.findElement(By.id("client-area-content"));
+//        javascriptExecutor.executeScript("window.scrollBy(0,1000)");
+//        System.out.println("Test: Scrolling Vertically 0 - 1000 Pixels Successful!");
+
+
+
 
 //        WebElement phoneNumberElement = driver.findElement(By.xpath("//*[@id=\"phone\"]"));
 //        phoneNumberElement.sendKeys("+40 21 123 4567");
