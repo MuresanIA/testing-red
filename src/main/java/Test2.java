@@ -95,6 +95,10 @@ public class Test2 {
         streetAddressElement.sendKeys("Test Street Address");
         System.out.println("Test: Send Keys to Street Address Successful!");
 
+        WebElement numberElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierHouseNumber\"]/div[2]/input"));
+        numberElement.sendKeys("Test Number Element");
+        System.out.println("Test: Testing Number Element Successful!");
+
 //        wait = new WebDriverWait(driver, 20);
         driver.close();
 
