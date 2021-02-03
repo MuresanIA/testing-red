@@ -69,6 +69,15 @@ public class Test2 {
         vatCode.sendKeys("Test VAT Code");
         System.out.println("Test: VAT Code Successful!");
 
+        WebElement selectCountry = driver.findElement(By.xpath("//*[@id=\"testing_autocompleteForm\"]"));
+        selectCountry.click();
+        System.out.println("Test: Click Country Search Bar Element Successful!");
+
+        wait = new WebDriverWait(driver, 50);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_search\"]/div/input")));
+        WebElement searchBarSelectCountry = driver.findElement(By.xpath("//*[@id=\"testing_search\"]/div/input"));
+        searchBarSelectCountry.sendKeys("Romania");
+        System.out.println("Test: Sending Keys to Search Bar Select Country Successful!");
 
 
         driver.close();
