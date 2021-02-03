@@ -65,6 +65,10 @@ public class Test2 {
         identificationNUmber.sendKeys("Test Identification Number");
         System.out.println("Test: Identification Number Successful!");
 
+        WebElement vatCode = driver.findElement(By.xpath("//*[@id=\"testing_SupplierVatCode\"]/div[2]/input"));
+        vatCode.sendKeys("Test VAT Code");
+        System.out.println("Test: VAT Code Successful!");
+
 
 
         driver.close();
