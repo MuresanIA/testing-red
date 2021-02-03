@@ -120,7 +120,7 @@ public class Test2 {
         System.out.println("Test: Sending Keys to Email Element Successful!");
 
 //        wait = new WebDriverWait(driver, 20);
-//        driver.close();
+        driver.close();
 
     }
 }
