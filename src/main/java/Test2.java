@@ -79,7 +79,14 @@ public class Test2 {
         searchBarSelectCountry.sendKeys("Romania");
         System.out.println("Test: Sending Keys to Search Bar Select Country Successful!");
 
+        wait = new WebDriverWait(driver, 50);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_search_results\"]/ion-item[1]/ion-label/ion-text/h3")));
+        WebElement selectRomaniaAsCountry = driver.findElement(By.xpath("//*[@id=\"testing_search_results\"]/ion-item[1]/ion-label/ion-text/h3"));
+        selectRomaniaAsCountry.click();
+        System.out.println("Test: Select Romania As Country Successful!");
 
+
+        wait = new WebDriverWait(driver, 20);
         driver.close();
 
     }
