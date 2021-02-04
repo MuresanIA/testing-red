@@ -32,7 +32,7 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 100);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("canvas")));
-        System.out.println("Test: Identifying Webl Element Canvas successful!");
+        System.out.println("Test: Identifying Web Element Canvas successful!");
         List<WebElement> burger = driver.findElements(By.xpath("//*[@id=\"client-area-content\"]/red-platform-client-area-home/ion-header/ion-toolbar/ion-buttons/ion-menu-button//button"));
 
         if (burger.size() > 0) {
