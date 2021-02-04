@@ -169,6 +169,20 @@ public class Test2 {
         chooseMonthAndYearElement.click();
         System.out.println("Test: Click On Choose Month And Year Element Successful!");
 
+        wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-multi-year-view/table/tbody/tr[2]/td[3]/div")));
+        WebElement selectYear2022 = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-multi-year-view/table/tbody/tr[2]/td[3]/div"));
+        selectYear2022.click();
+        System.out.println("Test: Select Year 2022 Successful!");
+
+        //TODO: Fix the prob
+        wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-1\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]/div")));
+        WebElement selectMothJune = driver.findElement(By.xpath("//*[@id=\"ion-overlay-1\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]/div"));
+        selectMothJune.click();
+        System.out.println("Test: Select Month August Successful!");
+
+
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
 
