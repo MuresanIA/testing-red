@@ -221,8 +221,8 @@ public class Test2 {
         clickOnSendRequestButton.click();
         System.out.println("Test: Click On Send Request Button Successful!");
 
-//        wait = new WebDriverWait(driver, 20);
-//        driver.close();
+
+        driver.close();
 
     }
 }
