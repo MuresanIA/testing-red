@@ -164,8 +164,8 @@ public class Test2 {
 
         //Todo: check statements
         wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-6\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/mat-calendar-header/div")));
-        WebElement chooseMonthAndYearElement = driver.findElement(By.xpath("//*[@id=\"ion-overlay-5\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/mat-calendar-header/div/div/button[1]"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td")));
+        WebElement chooseMonthAndYearElement = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/mat-calendar-header/div/div/button[1]/span"));
         chooseMonthAndYearElement.click();
         System.out.println("Test: Click On Choose Month And Year Element Successful!");
 
