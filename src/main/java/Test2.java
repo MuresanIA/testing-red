@@ -142,7 +142,6 @@ public class Test2 {
         licenseTypeElement.click();
         System.out.println("Test: Click On License Plate Element Successful!");
 
-        //TODO: Check if the following statements are correct or not
         wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-2\"]/div[2]")));
         WebElement checkBoxElectricity = driver.findElement(By.xpath("//*[@id=\"alert-input-2-0\"]"));
