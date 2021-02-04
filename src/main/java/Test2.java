@@ -134,11 +134,12 @@ public class Test2 {
         IBANElement.sendKeys("Test IBAN Element");
         System.out.println("Test: Sending Keys to IBAN Element Successful!");
 
-        //TODO: Check if the following statements are correct or not
+
         WebElement licenseTypeElement = driver.findElement(By.xpath("//*[@id=\"testing_supplierLicenseType\"]"));
         licenseTypeElement.click();
         System.out.println("Test: Click On License Plate Element Successful!");
 
+        //TODO: Check if the following statements are correct or not
 //        wait = new WebDriverWait(driver, 30);
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("alert-12-hdr")));
         WebElement checkBoxElectricity = driver.findElement(By.id("alert-input-12-0"));
