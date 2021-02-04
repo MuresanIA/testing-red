@@ -20,7 +20,7 @@ public class Test2 {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
-
+        System.out.println("Test: Expected Conditions Username Element Successful!");
         WebElement username = driver.findElement(By.xpath("//*[@id=\"username\"]"));
         WebElement password = driver.findElement(By.xpath("//*[@id=\"password\"]"));
         WebElement loginButton = driver.findElement(By.id("kc-login"));
@@ -32,7 +32,7 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 100);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("canvas")));
-        System.out.println("Test: Identifying Web Element Canvas successful!");
+        System.out.println("Test: Expected Conditions Web Element Canvas successful!");
         List<WebElement> burger = driver.findElements(By.xpath("//*[@id=\"client-area-content\"]/red-platform-client-area-home/ion-header/ion-toolbar/ion-buttons/ion-menu-button//button"));
 
         if (burger.size() > 0) {
@@ -77,18 +77,21 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_search\"]/div/input")));
+        System.out.println("Test: Expected Conditions Testing Search Element Successful!");
         WebElement searchBarSelectCountry = driver.findElement(By.xpath("//*[@id=\"testing_search\"]/div/input"));
         searchBarSelectCountry.sendKeys("Romania");
         System.out.println("Test: Sending Keys to Search Bar Select Country Successful!");
 
         wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_search_results\"]/ion-item[1]/ion-label/ion-text/h3")));
+        System.out.println("Test: Expected Conditions Testing Search Element Successful!");
         WebElement selectRomaniaAsCountry = driver.findElement(By.xpath("//*[@id=\"testing_search_results\"]/ion-item[1]/ion-label/ion-text/h3"));
         selectRomaniaAsCountry.click();
         System.out.println("Test: Selecting Romania As Country Successful!");
 
         wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"client-area-content\"]/red-platform-create-supplier/ion-content/red-platform-create-supplier-component/form")));
+        System.out.println("Test: Expected Conditions Client Area Conte Element Successful!");
         WebElement cityElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCity\"]/div[2]/input"));
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", cityElement);
         cityElement.sendKeys("Test City Element");
@@ -117,12 +120,14 @@ public class Test2 {
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", emailElement);
         wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_SupplierEmail\"]/div[2]/input")));
+        System.out.println("Test: Expected Conditions Phone Element Successful!");
         emailElement.sendKeys("test@gmail.com");
         System.out.println("Test: Sending Keys to Email Element Successful!");
 
         WebElement bankNameElement = driver.findElement(By.xpath("//*[@id=\"testing_BankName\"]"));
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", bankNameElement);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_BankName\"]")));
+        System.out.println("Test: Expected Conditions Testing Bank Name Element Successful!");
         bankNameElement.sendKeys("Test Bank Name");
         System.out.println("Test: Sending Keys to Bank Name Element Successful!");
 
@@ -144,6 +149,7 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-2\"]/div[2]")));
+        System.out.println("Test: Expected Conditions Ion Overlay 2 Element Successful!");
         WebElement checkBoxElectricity = driver.findElement(By.xpath("//*[@id=\"alert-input-2-0\"]"));
         checkBoxElectricity.click();
         System.out.println("Test: Click On Check Box Electricity Element Successful!");
@@ -164,26 +170,28 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td")));
+        System.out.println("Test: Expected Conditions Ion Overlay 3 Element Successful!");
         WebElement chooseMonthAndYearElement = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/mat-calendar-header/div/div/button[1]/span"));
         chooseMonthAndYearElement.click();
         System.out.println("Test: Click On Choose Month And Year Element Successful!");
 
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-multi-year-view/table/tbody/tr[2]/td[3]/div")));
+        System.out.println("Test: Expected Conditions Ion Overlay 3 Element Successful!");
         WebElement selectYear2022 = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-multi-year-view/table/tbody/tr[2]/td[3]/div"));
         selectYear2022.click();
         System.out.println("Test: Select Year 2022 Successful!");
 
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]")));
-        System.out.println("Test: Expected conditions Date Picker Successful!");
+        System.out.println("Test: Expected Conditions Date Picker Successful!");
         WebElement selectMonthJune = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]/div"));
         selectMonthJune.click();
         System.out.println("Test: Select Month June Successful!");
 
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[1]")));
-        System.out.println("Test: Expected conditions Select Date Header Successful!");
+        System.out.println("Test: Expected Conditions Select Date Header Successful!");
         WebElement selectDateJun23 = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-month-view/table/tbody/tr[4]/td[5]/div"));
         selectDateJun23.click();
         System.out.println("Test: Click On Jun 23 Successful!");
