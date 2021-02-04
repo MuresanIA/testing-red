@@ -162,6 +162,12 @@ public class Test2 {
         expireOnElement.click();
         System.out.println("Test: Click On Expire On Element Successful!");
 
+        //Todo: check statements
+        wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-6\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/mat-calendar-header/div")));
+        WebElement chooseMonthAndYearElement = driver.findElement(By.xpath("//*[@id=\"ion-overlay-5\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/mat-calendar-header/div/div/button[1]"));
+        chooseMonthAndYearElement.click();
+        System.out.println("Test: Click On Choose Month And Year Element Successful!");
 
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
