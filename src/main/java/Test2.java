@@ -140,19 +140,19 @@ public class Test2 {
         System.out.println("Test: Click On License Plate Element Successful!");
 
         //TODO: Check if the following statements are correct or not
-//        wait = new WebDriverWait(driver, 30);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("alert-12-hdr")));
-        WebElement checkBoxElectricity = driver.findElement(By.id("alert-input-12-0"));
+        wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-2\"]/div[2]")));
+        WebElement checkBoxElectricity = driver.findElement(By.xpath("//*[@id=\"alert-input-2-0\"]"));
         checkBoxElectricity.click();
         System.out.println("Test: Click On Check Box Electricity Element Successful!");
 
-        WebElement checkBoxSelectButton = driver.findElement(By.xpath("//*[@id=\"ion-overlay-12\"]/div[2]/div[4]/button[2]/span"));
+        WebElement checkBoxSelectButton = driver.findElement(By.xpath("//*[@id=\"ion-overlay-2\"]/div[2]/div[4]/button[2]"));
         checkBoxSelectButton.click();
         System.out.println("Test: Click On Select Button from CheckBox Element Successful!");
 
 
 //        wait = new WebDriverWait(driver, 20);
-        driver.close();
+//        driver.close();
 
     }
 }
