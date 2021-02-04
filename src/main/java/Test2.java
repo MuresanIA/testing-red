@@ -47,7 +47,7 @@ public class Test2 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("testing_RoleInfoImg")));
         System.out.println("Test: Expected Conditions: Element RoleInfoImg Located Successful!");
         WebElement becomeASupplierButton = driver.findElement(By.xpath("//*[@id=\"client-area-content\"]/red-platform-supplier/ion-content/ion-grid/ion-row/ion-col/red-platform-role-info/div/div/div[3]/ion-button"));
-//                                                                       //*[@id="client-area-content"]/red-platform-supplier/ion-content/ion-grid/ion-row/ion-col/red-platform-role-info/div/div/div[3]/ion-button//button
+                                                                       //*[@id="client-area-content"]/red-platform-supplier/ion-content/ion-grid/ion-row/ion-col/red-platform-role-info/div/div/div[3]/ion-button//button
 
         becomeASupplierButton.click();
         System.out.println("Test: Click on Become A Supplier Button Successful!");
