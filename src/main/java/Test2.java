@@ -181,7 +181,12 @@ public class Test2 {
         selectMonthJune.click();
         System.out.println("Test: Select Month June Successful!");
 
-
+        wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[1]")));
+        System.out.println("Test: Expected conditions Select Date Header Successful!");
+        WebElement selectDateJun23 = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-month-view/table/tbody/tr[4]/td[5]/div"));
+        selectDateJun23.click();
+        System.out.println("Test: Click On Jun 23 Successful!");
 
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
