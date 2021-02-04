@@ -153,6 +153,11 @@ public class Test2 {
         checkBoxSelectButton.click();
         System.out.println("Test: Click On Select Button from CheckBox Element Successful!");
 
+        WebElement licensePlateElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierLicenceNumber\"]/div[2]/input"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", licensePlateElement);
+        licensePlateElement.sendKeys("Test License Plate");
+        System.out.println("Test: Sending Keys to License Plate Successful!");
+
 
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
