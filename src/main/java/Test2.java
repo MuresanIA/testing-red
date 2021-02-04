@@ -194,11 +194,19 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_SupplierLicenceExpire\"]/red-platform-datepicker-control")));
-        System.out.println("Test: Expected conditions Testing Supplier Licence Expire Successful!");
+        System.out.println("Test: Expected Conditions Testing Supplier Licence Expire Successful!");
         WebElement agreeSupplierCheckBox = driver.findElement(By.xpath("//*[@id=\"testing_SupplierAcceptTnc\"]/ion-checkbox"));
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", agreeSupplierCheckBox);
         agreeSupplierCheckBox.click();
         System.out.println("Test: Click On Agree To The Terms CheckBox Successful!");
+
+        wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"testing_SupplierAcceptGdpr\"]/ion-checkbox")));
+        System.out.println("Test: Expected Conditions Testing Supplier CheckBox Successful!");
+        WebElement dataPrivacyPolicy = driver.findElement(By.xpath("//*[@id=\"testing_SupplierAcceptGdpr\"]/ion-checkbox"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", dataPrivacyPolicy);
+        dataPrivacyPolicy.click();
+        System.out.println("Test: Click On Data Privacy Policy CheckBox Successful!");
 
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
