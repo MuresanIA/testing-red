@@ -113,7 +113,7 @@ public class Test2 {
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", phoneNumberElement);
         wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"phone\"]")));
-        System.out.println("Expected Conditions Phone Element Successful!");
+        System.out.println("Test: Expected Conditions Phone Element Successful!");
         phoneNumberElement.sendKeys("40211234567");
         System.out.println("Test: Sending Keys to Phone Number Element Successful!");
 
@@ -216,6 +216,10 @@ public class Test2 {
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", dataPrivacyPolicy);
         dataPrivacyPolicy.click();
         System.out.println("Test: Click On Data Privacy Policy CheckBox Successful!");
+
+        WebElement clickOnSendRequestButton = driver.findElement(By.xpath("//*[@id=\"testing_SupplierSubmitRequest\"]"));
+        clickOnSendRequestButton.click();
+        System.out.println("Test: Click On Send Request Button Successful!");
 
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
