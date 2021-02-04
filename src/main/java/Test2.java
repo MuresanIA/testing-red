@@ -218,11 +218,12 @@ public class Test2 {
         System.out.println("Test: Click On Data Privacy Policy CheckBox Successful!");
 
         WebElement clickOnSendRequestButton = driver.findElement(By.xpath("//*[@id=\"testing_SupplierSubmitRequest\"]"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", clickOnSendRequestButton);
         clickOnSendRequestButton.click();
         System.out.println("Test: Click On Send Request Button Successful!");
 
 
-        driver.close();
+//        driver.close();
 
     }
 }
