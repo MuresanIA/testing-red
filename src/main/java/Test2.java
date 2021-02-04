@@ -64,7 +64,7 @@ public class Test2 {
         System.out.println("Test: Sending Keys to Company Name Successful!");
 
         WebElement identificationNUmber = driver.findElement(By.xpath("//*[@id=\"testing_SupplierCompanyIdentificationNumber\"]/div[2]/input"));
-        identificationNUmber.sendKeys("Test Identification Number");
+        identificationNUmber.sendKeys("Test ID NR");
         System.out.println("Test: Sending Keys to Identification Number Successful!");
 
         WebElement vatCode = driver.findElement(By.xpath("//*[@id=\"testing_SupplierVatCode\"]/div[2]/input"));
