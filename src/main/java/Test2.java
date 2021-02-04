@@ -32,7 +32,7 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 100);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("canvas")));
-        System.out.println("Test: Expected Conditions Web Element Canvas successful!");
+        System.out.println("Test: Expected Conditions Web Element Canvas Successful!");
         List<WebElement> burger = driver.findElements(By.xpath("//*[@id=\"client-area-content\"]/red-platform-client-area-home/ion-header/ion-toolbar/ion-buttons/ion-menu-button//button"));
 
         if (burger.size() > 0) {
@@ -45,7 +45,7 @@ public class Test2 {
         System.out.println("Test: Click On Supplier Button Successful!");
         wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("testing_RoleInfoImg")));
-        System.out.println("Test: Expected Conditions: Element RoleInfoImg Located Successful!");
+        System.out.println("Test: Expected Conditions: Element RoleInfoImg Successful!");
         WebElement becomeASupplierButton = driver.findElement(By.xpath("//*[@id=\"client-area-content\"]/red-platform-supplier/ion-content/ion-grid/ion-row/ion-col/red-platform-role-info/div/div/div[3]/ion-button"));
                                                                        //*[@id="client-area-content"]/red-platform-supplier/ion-content/ion-grid/ion-row/ion-col/red-platform-role-info/div/div/div[3]/ion-button//button
 
@@ -113,6 +113,7 @@ public class Test2 {
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", phoneNumberElement);
         wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"phone\"]")));
+        System.out.println("Expected Conditions Phone Element Successful!");
         phoneNumberElement.sendKeys("40211234567");
         System.out.println("Test: Sending Keys to Phone Number Element Successful!");
 
