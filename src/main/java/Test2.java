@@ -184,7 +184,7 @@ public class Test2 {
 
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]")));
-        System.out.println("Test: Expected condtions Date Pick Successful!");
+        System.out.println("Test: Expected condtions Date Picker Successful!");
         WebElement selectMothJune = driver.findElement(By.xpath("//*[@id=\"ion-overlay-1\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]"));
         List<WebElement> columns = selectMothJune.findElements(By.tagName("td"));
         for (WebElement cell : columns) {
