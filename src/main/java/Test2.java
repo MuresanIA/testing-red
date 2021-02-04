@@ -188,6 +188,10 @@ public class Test2 {
         selectDateJun23.click();
         System.out.println("Test: Click On Jun 23 Successful!");
 
+        WebElement clickOnSelectButton = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[3]/ion-grid/ion-row/ion-col[1]/ion-button"));
+        clickOnSelectButton.click();
+        System.out.println("Test: Click On Select Button Successful!");
+
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
 
