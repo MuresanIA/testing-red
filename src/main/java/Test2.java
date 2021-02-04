@@ -127,15 +127,18 @@ public class Test2 {
         System.out.println("Test: Sending Keys to Bank Name Element Successful!");
 
         WebElement bankAddressElement = driver.findElement(By.xpath("//*[@id=\"testing_BankAddress\"]"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", bankAddressElement);
         bankAddressElement.sendKeys("Test Bank Address");
         System.out.println("Test: Sending Keys to Bank Address Element Successful!");
 
         WebElement IBANElement = driver.findElement(By.xpath("//*[@id=\"testing_BankIban\"]"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", IBANElement);
         IBANElement.sendKeys("Test IBAN Element");
         System.out.println("Test: Sending Keys to IBAN Element Successful!");
 
 
         WebElement licenseTypeElement = driver.findElement(By.xpath("//*[@id=\"testing_supplierLicenseType\"]"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", licenseTypeElement);
         licenseTypeElement.click();
         System.out.println("Test: Click On License Plate Element Successful!");
 
