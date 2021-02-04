@@ -175,25 +175,14 @@ public class Test2 {
         selectYear2022.click();
         System.out.println("Test: Select Year 2022 Successful!");
 
-        //TODO: Fix the prob
-//        wait = new WebDriverWait(driver, 5);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-1\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]")));
-//        WebElement selectMothJune = driver.findElement(By.xpath("//*[@id=\"ion-overlay-1\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]"));
-//        selectMothJune.click();
-//        System.out.println("Test: Select Month August Successful!");
 
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]")));
-        System.out.println("Test: Expected condtions Date Picker Successful!");
-        WebElement selectMothJune = driver.findElement(By.xpath("//*[@id=\"ion-overlay-1\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]"));
-        List<WebElement> columns = selectMothJune.findElements(By.tagName("td"));
-        for (WebElement cell : columns) {
-            if (cell.getText().equals("JUN")) {
-                cell.findElement(By.linkText("JUN")).click();
-                break;
-            }
-        }
-        System.out.println("Test: Select Month Jun Successful!");
+        System.out.println("Test: Expected conditions Date Picker Successful!");
+        WebElement selectMonthJune = driver.findElement(By.xpath("//*[@id=\"ion-overlay-3\"]/div[2]/red-platform-detepicker-modal/section[2]/red-platform-calendar/mat-calendar/div/mat-year-view/table/tbody/tr[3]/td[2]/div"));
+        selectMonthJune.click();
+        System.out.println("Test: Select Month June Successful!");
+
 
 
 //        wait = new WebDriverWait(driver, 20);
