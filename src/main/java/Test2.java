@@ -157,6 +157,11 @@ public class Test2 {
         licensePlateElement.sendKeys("Test License Plate");
         System.out.println("Test: Sending Keys to License Plate Successful!");
 
+        WebElement expireOnElement = driver.findElement(By.xpath("//*[@id=\"testing_SupplierLicenceExpire\"]/red-platform-datepicker-control"));
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", expireOnElement);
+        expireOnElement.click();
+        System.out.println("Test: Click On Expire On Element Successful!");
+
 
 //        wait = new WebDriverWait(driver, 20);
 //        driver.close();
